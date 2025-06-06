@@ -31,29 +31,34 @@
                ACCEPT WS-OPERATION
                
                EVALUATE WS-OPERATION
-                   WHEN "1" OR "CONNECT"
+                   WHEN "1"
+                   WHEN "CONNECT"
                        MOVE "CONNECT" TO WS-OPERATION
-                       DISPLAY "Enter connection data: " WITH NO ADVANCING
+                       DISPLAY "Enter connection data: " WITH NO ADVANCE
                        ACCEPT WS-INPUT-DATA
                        PERFORM CALL-BRIDGE
-                   WHEN "2" OR "SEND_MESSAGE"
+                   WHEN "2"
+                   WHEN "SEND_MESSAGE"
                        MOVE "SEND_MESSAGE" TO WS-OPERATION
-                       DISPLAY "Enter message to send: " WITH NO ADVANCING
+                       DISPLAY "Enter message to send: " WITH NO ADVANCE
                        ACCEPT WS-INPUT-DATA
                        PERFORM CALL-BRIDGE
-                   WHEN "3" OR "RECEIVE_MESSAGE"
+                   WHEN "3"
+                   WHEN "RECEIVE_MESSAGE"
                        MOVE "RECEIVE_MESSAGE" TO WS-OPERATION
                        MOVE SPACES TO WS-INPUT-DATA
                        PERFORM CALL-BRIDGE
-                   WHEN "4" OR "DISCONNECT"
+                   WHEN "4"
+                   WHEN "DISCONNECT"
                        MOVE "DISCONNECT" TO WS-OPERATION
                        MOVE SPACES TO WS-INPUT-DATA
                        PERFORM CALL-BRIDGE
-                   WHEN "5" OR "EXIT"
+                   WHEN "5"
+                   WHEN "EXIT"
                        MOVE "N" TO WS-CONTINUE-FLAG
                    WHEN OTHER
                        DISPLAY "Invalid operation. Please try again."
-               END-EVALUATE
+               END-EVALUATE.
            END-PERFORM
            
            DISPLAY "CBLPolyCall Client terminated."
