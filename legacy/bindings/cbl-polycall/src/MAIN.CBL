@@ -1,7 +1,7 @@
-*CBLPolyCall Main Program v1.0
-       *OBINexus Aegis Engineering - PolyCall COBOL Client
-       *Technical Lead: Nnamdi Michael Okpala
-       
+      * CBLPolyCall Main Program v1.0
+      * OBINexus Aegis Engineering - PolyCall COBOL Client
+      * Technical Lead: Nnamdi Michael Okpala
+      
        IDENTIFICATION DIVISION.
        PROGRAM-ID. CBLPOLYCALL-MAIN.
        
@@ -31,45 +31,25 @@
                ACCEPT WS-OPERATION
                
                EVALUATE WS-OPERATION
-                   WHEN "1"
+                   WHEN "1" OR "CONNECT"
                        MOVE "CONNECT" TO WS-OPERATION
-                       DISPLAY "Enter connection data: "
-                           WITH NO ADVANCING
+                       DISPLAY "Enter connection data: " WITH NO ADVANCING
                        ACCEPT WS-INPUT-DATA
                        PERFORM CALL-BRIDGE
-                   WHEN "CONNECT"
-                       DISPLAY "Enter connection data: "
-                           WITH NO ADVANCING
-                       ACCEPT WS-INPUT-DATA
-                       PERFORM CALL-BRIDGE
-                   WHEN "2"
+                   WHEN "2" OR "SEND_MESSAGE"
                        MOVE "SEND_MESSAGE" TO WS-OPERATION
-                       DISPLAY "Enter message to send: "
-                           WITH NO ADVANCING
+                       DISPLAY "Enter message to send: " WITH NO ADVANCING
                        ACCEPT WS-INPUT-DATA
                        PERFORM CALL-BRIDGE
-                   WHEN "SEND_MESSAGE"
-                       DISPLAY "Enter message to send: "
-                           WITH NO ADVANCING
-                       ACCEPT WS-INPUT-DATA
-                       PERFORM CALL-BRIDGE
-                   WHEN "3"
+                   WHEN "3" OR "RECEIVE_MESSAGE"
                        MOVE "RECEIVE_MESSAGE" TO WS-OPERATION
                        MOVE SPACES TO WS-INPUT-DATA
                        PERFORM CALL-BRIDGE
-                   WHEN "RECEIVE_MESSAGE"
-                       MOVE SPACES TO WS-INPUT-DATA
-                       PERFORM CALL-BRIDGE
-                   WHEN "4"
+                   WHEN "4" OR "DISCONNECT"
                        MOVE "DISCONNECT" TO WS-OPERATION
                        MOVE SPACES TO WS-INPUT-DATA
                        PERFORM CALL-BRIDGE
-                   WHEN "DISCONNECT"
-                       MOVE SPACES TO WS-INPUT-DATA
-                       PERFORM CALL-BRIDGE
-                   WHEN "5"
-                       MOVE "N" TO WS-CONTINUE-FLAG
-                   WHEN "EXIT"
+                   WHEN "5" OR "EXIT"
                        MOVE "N" TO WS-CONTINUE-FLAG
                    WHEN OTHER
                        DISPLAY "Invalid operation. Please try again."

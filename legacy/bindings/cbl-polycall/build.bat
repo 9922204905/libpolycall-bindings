@@ -82,11 +82,11 @@ echo %GREEN%[SUCCESS]%NC% Project structure with library support initialized
 goto :eof
 
 :create_config
-echo %BLUE%[CONFIG]%NC% Creating local readonly GnuCOBOL configuration...
+echo %BLUE%[CONFIG]%NC% Creating comprehensive local readonly GnuCOBOL configuration...
 if not exist %CBL_CONFIG_DIR% mkdir %CBL_CONFIG_DIR%
 
 echo # CBLPolyCall Local GnuCOBOL Configuration v1.0 > %CBL_CONFIG_DIR%\default.conf
-echo # OBINexus Aegis Engineering - Localized COBOL Runtime Environment >> %CBL_CONFIG_DIR%\default.conf
+echo # OBINexus Aegis Engineering - Complete Runtime Environment >> %CBL_CONFIG_DIR%\default.conf
 echo # Technical Lead: Nnamdi Michael Okpala >> %CBL_CONFIG_DIR%\default.conf
 echo. >> %CBL_CONFIG_DIR%\default.conf
 echo name: "cblpolycall-local" >> %CBL_CONFIG_DIR%\default.conf
@@ -105,11 +105,121 @@ echo defaultbyte: init >> %CBL_CONFIG_DIR%\default.conf
 echo filename-mapping: yes >> %CBL_CONFIG_DIR%\default.conf
 echo pretty-display: yes >> %CBL_CONFIG_DIR%\default.conf
 echo assign-clause: dynamic >> %CBL_CONFIG_DIR%\default.conf
+echo screen-section-rules: std >> %CBL_CONFIG_DIR%\default.conf
+echo dpc-in-data: xml >> %CBL_CONFIG_DIR%\default.conf
+echo subscript-check: 3 >> %CBL_CONFIG_DIR%\default.conf
+echo complex-odo: no >> %CBL_CONFIG_DIR%\default.conf
+echo odoslide: no >> %CBL_CONFIG_DIR%\default.conf
+echo init-justify: no >> %CBL_CONFIG_DIR%\default.conf
+echo indirect-redefines: no >> %CBL_CONFIG_DIR%\default.conf
+echo relax-syntax-checks: no >> %CBL_CONFIG_DIR%\default.conf
+echo ref-mod-zero-length: yes >> %CBL_CONFIG_DIR%\default.conf
+echo relax-level-hierarchy: no >> %CBL_CONFIG_DIR%\default.conf
+echo select-working: no >> %CBL_CONFIG_DIR%\default.conf
+echo local-implies-recursive: no >> %CBL_CONFIG_DIR%\default.conf
+echo sticky-linkage: no >> %CBL_CONFIG_DIR%\default.conf
+echo move-ibm: no >> %CBL_CONFIG_DIR%\default.conf
+echo perform-osvs: no >> %CBL_CONFIG_DIR%\default.conf
+echo arithmetic-osvs: no >> %CBL_CONFIG_DIR%\default.conf
+echo constant-folding: yes >> %CBL_CONFIG_DIR%\default.conf
+echo hostsign: no >> %CBL_CONFIG_DIR%\default.conf
+echo program-name-redefinition: yes >> %CBL_CONFIG_DIR%\default.conf
+echo accept-update: no >> %CBL_CONFIG_DIR%\default.conf
+echo accept-auto: no >> %CBL_CONFIG_DIR%\default.conf
+echo console-is-crt: no >> %CBL_CONFIG_DIR%\default.conf
+echo no-echo-means-secure: no >> %CBL_CONFIG_DIR%\default.conf
+echo line-col-zero-default: no >> %CBL_CONFIG_DIR%\default.conf
+echo display-special-fig-consts: no >> %CBL_CONFIG_DIR%\default.conf
+echo binary-comp-1: no >> %CBL_CONFIG_DIR%\default.conf
+echo numeric-pointer: no >> %CBL_CONFIG_DIR%\default.conf
+echo move-non-numeric-lit-to-numeric-is-zero: no >> %CBL_CONFIG_DIR%\default.conf
+echo implicit-assign-dynamic-var: no >> %CBL_CONFIG_DIR%\default.conf
+echo device-mnemonics: no >> %CBL_CONFIG_DIR%\default.conf
+echo xml-parse-xmlss: no >> %CBL_CONFIG_DIR%\default.conf
+echo areacheck: no >> %CBL_CONFIG_DIR%\default.conf
+echo comment-paragraphs: no >> %CBL_CONFIG_DIR%\default.conf
+echo control-division: no >> %CBL_CONFIG_DIR%\default.conf
+echo partial-replace-when-literal-src: no >> %CBL_CONFIG_DIR%\default.conf
+echo memory-size-clause: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo multiple-file-tape-clause: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo label-records-clause: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo value-of-clause: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo data-records-clause: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo top-level-occurs-clause: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo same-as-clause: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo type-to-clause: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo usage-type: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo synchronized-clause: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo sync-left-right: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo special-names-clause: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo goto-statement-without-name: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo stop-literal-statement: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo stop-identifier-statement: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo stop-error-statement: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo debugging-mode: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo use-for-debugging: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo padding-character-clause: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo next-sentence-phrase: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo listing-statements: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo title-statement: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo entry-statement: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo move-noninteger-to-alphanumeric: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo move-figurative-constant-to-numeric: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo move-figurative-space-to-numeric: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo move-figurative-quote-to-numeric: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo odo-without-to: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo section-segments: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo alter-statement: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo call-overflow: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo numeric-boolean: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo hexadecimal-boolean: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo national-literals: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo hexadecimal-national-literals: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo national-character-literals: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo hp-octal-literals: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo acu-literals: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo ebcdic-symbolic-characters: no >> %CBL_CONFIG_DIR%\default.conf
+echo word-continuation: ok >> %CBL_CONFIG_DIR%\default.conf
+echo not-exception-before-exception: ok >> %CBL_CONFIG_DIR%\default.conf
+echo accept-display-extensions: ok >> %CBL_CONFIG_DIR%\default.conf
+echo renames-uncommon-levels: ok >> %CBL_CONFIG_DIR%\default.conf
+echo larger-redefines: ok >> %CBL_CONFIG_DIR%\default.conf
+echo symbolic-constant: ok >> %CBL_CONFIG_DIR%\default.conf
+echo constant-78: ok >> %CBL_CONFIG_DIR%\default.conf
+echo constant-01: ok >> %CBL_CONFIG_DIR%\default.conf
+echo perform-varying-without-by: ok >> %CBL_CONFIG_DIR%\default.conf
+echo reference-out-of-declaratives: ok >> %CBL_CONFIG_DIR%\default.conf
+echo program-prototypes: ok >> %CBL_CONFIG_DIR%\default.conf
+echo call-convention-mnemonic: ok >> %CBL_CONFIG_DIR%\default.conf
+echo call-convention-linkage: ok >> %CBL_CONFIG_DIR%\default.conf
+echo using-optional: ok >> %CBL_CONFIG_DIR%\default.conf
+echo numeric-value-for-edited-item: ok >> %CBL_CONFIG_DIR%\default.conf
+echo incorrect-conf-sec-order: ok >> %CBL_CONFIG_DIR%\default.conf
+echo define-constant-directive: ok >> %CBL_CONFIG_DIR%\default.conf
+echo free-redefines-position: ok >> %CBL_CONFIG_DIR%\default.conf
+echo records-mismatch-record-clause: ok >> %CBL_CONFIG_DIR%\default.conf
+echo record-delimiter: ok >> %CBL_CONFIG_DIR%\default.conf
+echo sequential-delimiters: ok >> %CBL_CONFIG_DIR%\default.conf
+echo record-delim-with-fixed-recs: ok >> %CBL_CONFIG_DIR%\default.conf
+echo missing-statement: warning >> %CBL_CONFIG_DIR%\default.conf
+echo missing-period: warning >> %CBL_CONFIG_DIR%\default.conf
+echo zero-length-literals: ok >> %CBL_CONFIG_DIR%\default.conf
+echo xml-generate-extra-phrases: ok >> %CBL_CONFIG_DIR%\default.conf
+echo continue-after: ok >> %CBL_CONFIG_DIR%\default.conf
+echo goto-entry: warning >> %CBL_CONFIG_DIR%\default.conf
+echo assign-variable: ok >> %CBL_CONFIG_DIR%\default.conf
+echo assign-using-variable: ok >> %CBL_CONFIG_DIR%\default.conf
+echo assign-ext-dyn: ok >> %CBL_CONFIG_DIR%\default.conf
+echo assign-disk-from: ok >> %CBL_CONFIG_DIR%\default.conf
+echo vsam-status: ignore >> %CBL_CONFIG_DIR%\default.conf
+echo self-call-recursive: skip >> %CBL_CONFIG_DIR%\default.conf
+echo record-contains-depending-clause: unconformable >> %CBL_CONFIG_DIR%\default.conf
+echo picture-l: ok >> %CBL_CONFIG_DIR%\default.conf
 echo reserved-words: default >> %CBL_CONFIG_DIR%\default.conf
 
 REM Make configuration readonly
 attrib +R %CBL_CONFIG_DIR%\default.conf
-echo %GREEN%[SUCCESS]%NC% Local readonly configuration created: %CBL_CONFIG_DIR%\default.conf
+echo %GREEN%[SUCCESS]%NC% Comprehensive local readonly configuration created: %CBL_CONFIG_DIR%\default.conf
 goto :eof
 
 :build_all

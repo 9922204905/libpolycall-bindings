@@ -1,7 +1,7 @@
-*CBLPolyCall FFI Bridge v1.0
-       *OBINexus Aegis Engineering - COBOL to PolyCall Interface
-       *Technical Lead: Nnamdi Michael Okpala
-       
+      * CBLPolyCall FFI Bridge v1.0
+      * OBINexus Aegis Engineering - COBOL to PolyCall Interface
+      * Technical Lead: Nnamdi Michael Okpala
+      
        IDENTIFICATION DIVISION.
        PROGRAM-ID. POLYCALL-BRIDGE.
        
@@ -53,9 +53,9 @@
            MOVE SPACES TO WS-PROTOCOL-BUFFER.
        
        POLYCALL-CONNECT.
-       *Simulate PolyCall library connection
-       *In production, replace with actual FFI calls
-           MOVE ZERO TO WS-BRIDGE-STATUS
+      *    Call external PolyCall library function
+           CALL "polycall_connect" USING BY REFERENCE LNK-INPUT-DATA
+                                        BY REFERENCE WS-BRIDGE-STATUS
            
            IF WS-BRIDGE-STATUS = ZERO
                MOVE "CONNECTED" TO LNK-OUTPUT-DATA
@@ -66,9 +66,10 @@
            END-IF.
        
        POLYCALL-SEND.
-       *Simulate PolyCall message send
-       *In production, replace with actual FFI calls
-           MOVE ZERO TO WS-BRIDGE-STATUS
+      *    Call external PolyCall send function
+           CALL "polycall_send" USING BY REFERENCE LNK-INPUT-DATA
+                                     BY REFERENCE WS-PROTOCOL-BUFFER
+                                     BY REFERENCE WS-BRIDGE-STATUS
            
            IF WS-BRIDGE-STATUS = ZERO
                MOVE "MESSAGE_SENT" TO LNK-OUTPUT-DATA
@@ -79,12 +80,12 @@
            END-IF.
        
        POLYCALL-RECEIVE.
-       *Simulate PolyCall message receive
-       *In production, replace with actual FFI calls
-           MOVE ZERO TO WS-BRIDGE-STATUS
+      *    Call external PolyCall receive function
+           CALL "polycall_receive" USING BY REFERENCE WS-PROTOCOL-BUFFER
+                                        BY REFERENCE LNK-OUTPUT-DATA
+                                        BY REFERENCE WS-BRIDGE-STATUS
            
            IF WS-BRIDGE-STATUS = ZERO
-               MOVE "SAMPLE_RECEIVED_DATA" TO LNK-OUTPUT-DATA
                MOVE ZERO TO LNK-RESULT-CODE
            ELSE
                MOVE "RECEIVE_FAILED" TO LNK-OUTPUT-DATA
@@ -92,9 +93,8 @@
            END-IF.
        
        POLYCALL-DISCONNECT.
-       *Simulate PolyCall disconnection
-       *In production, replace with actual FFI calls
-           MOVE ZERO TO WS-BRIDGE-STATUS
+      *    Call external PolyCall disconnect function
+           CALL "polycall_disconnect" USING BY REFERENCE WS-BRIDGE-STATUS
            
            IF WS-BRIDGE-STATUS = ZERO
                MOVE "DISCONNECTED" TO LNK-OUTPUT-DATA
