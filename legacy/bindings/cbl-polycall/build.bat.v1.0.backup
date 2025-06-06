@@ -107,7 +107,7 @@ echo pretty-display: yes >> %CBL_CONFIG_DIR%\default.conf
 echo assign-clause: dynamic >> %CBL_CONFIG_DIR%\default.conf
 echo screen-section-rules: std >> %CBL_CONFIG_DIR%\default.conf
 echo dpc-in-data: xml >> %CBL_CONFIG_DIR%\default.conf
-echo subscript-check: max >> %CBL_CONFIG_DIR%\default.conf
+echo subscript-check: 3 >> %CBL_CONFIG_DIR%\default.conf
 echo complex-odo: no >> %CBL_CONFIG_DIR%\default.conf
 echo odoslide: no >> %CBL_CONFIG_DIR%\default.conf
 echo init-justify: no >> %CBL_CONFIG_DIR%\default.conf
@@ -137,9 +137,9 @@ echo implicit-assign-dynamic-var: no >> %CBL_CONFIG_DIR%\default.conf
 echo device-mnemonics: no >> %CBL_CONFIG_DIR%\default.conf
 echo xml-parse-xmlss: no >> %CBL_CONFIG_DIR%\default.conf
 echo areacheck: no >> %CBL_CONFIG_DIR%\default.conf
-echo comment-paragraphs: skip >> %CBL_CONFIG_DIR%\default.conf
-echo control-division: skip >> %CBL_CONFIG_DIR%\default.conf
-echo partial-replace-when-literal-src: skip >> %CBL_CONFIG_DIR%\default.conf
+echo comment-paragraphs: no >> %CBL_CONFIG_DIR%\default.conf
+echo control-division: no >> %CBL_CONFIG_DIR%\default.conf
+echo partial-replace-when-literal-src: no >> %CBL_CONFIG_DIR%\default.conf
 echo memory-size-clause: ignore >> %CBL_CONFIG_DIR%\default.conf
 echo multiple-file-tape-clause: ignore >> %CBL_CONFIG_DIR%\default.conf
 echo label-records-clause: ignore >> %CBL_CONFIG_DIR%\default.conf

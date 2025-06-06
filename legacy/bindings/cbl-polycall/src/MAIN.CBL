@@ -1,7 +1,7 @@
 *CBLPolyCall Main Program v1.0
-       *OBINexus Aegis Engineering - PolyCall COBOL Client
-       *Technical Lead: Nnamdi Michael Okpala
-       
+      *OBINexus Aegis Engineering - PolyCall COBOL Client  
+      *Technical Lead: Nnamdi Michael Okpala
+      
        IDENTIFICATION DIVISION.
        PROGRAM-ID. CBLPOLYCALL-MAIN.
        
@@ -22,7 +22,7 @@
                DISPLAY " "
                DISPLAY "Available Operations:"
                DISPLAY "1. CONNECT"
-               DISPLAY "2. SEND_MESSAGE"
+               DISPLAY "2. SEND_MESSAGE" 
                DISPLAY "3. RECEIVE_MESSAGE"
                DISPLAY "4. DISCONNECT"
                DISPLAY "5. EXIT"

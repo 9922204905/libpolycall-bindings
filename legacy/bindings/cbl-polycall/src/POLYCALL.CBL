@@ -1,7 +1,7 @@
-*CBLPolyCall FFI Bridge v1.0
-       *OBINexus Aegis Engineering - COBOL to PolyCall Interface
-       *Technical Lead: Nnamdi Michael Okpala
-       
+      *CBLPolyCall FFI Bridge v1.0
+      *OBINexus Aegis Engineering - COBOL to PolyCall Interface
+      *Technical Lead: Nnamdi Michael Okpala
+      
        IDENTIFICATION DIVISION.
        PROGRAM-ID. POLYCALL-BRIDGE.
        
@@ -53,8 +53,8 @@
            MOVE SPACES TO WS-PROTOCOL-BUFFER.
        
        POLYCALL-CONNECT.
-       *Simulate PolyCall library connection
-       *In production, replace with actual FFI calls
+      *Simulate PolyCall library connection
+      *In production, replace with actual FFI calls
            MOVE ZERO TO WS-BRIDGE-STATUS
            
            IF WS-BRIDGE-STATUS = ZERO
@@ -66,8 +66,8 @@
            END-IF.
        
        POLYCALL-SEND.
-       *Simulate PolyCall message send
-       *In production, replace with actual FFI calls
+      *Simulate PolyCall message send
+      *In production, replace with actual FFI calls
            MOVE ZERO TO WS-BRIDGE-STATUS
            
            IF WS-BRIDGE-STATUS = ZERO
@@ -79,8 +79,8 @@
            END-IF.
        
        POLYCALL-RECEIVE.
-       *Simulate PolyCall message receive
-       *In production, replace with actual FFI calls
+      *Simulate PolyCall message receive
+      *In production, replace with actual FFI calls
            MOVE ZERO TO WS-BRIDGE-STATUS
            
            IF WS-BRIDGE-STATUS = ZERO
@@ -92,8 +92,8 @@
            END-IF.
        
        POLYCALL-DISCONNECT.
-       *Simulate PolyCall disconnection
-       *In production, replace with actual FFI calls
+      *Simulate PolyCall disconnection
+      *In production, replace with actual FFI calls
            MOVE ZERO TO WS-BRIDGE-STATUS
            
            IF WS-BRIDGE-STATUS = ZERO
